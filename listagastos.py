@@ -1,7 +1,6 @@
 import sqlite3
 import os
 
-# Inicializar la base de datos
 def init_database():
     conn = sqlite3.connect("expenses.db")
     cursor = conn.cursor()
@@ -18,7 +17,6 @@ def init_database():
     conn.commit()
     conn.close()
 
-# Registrar un gasto
 def add_expense(date, description, amount):
     conn = sqlite3.connect("expenses.db")
     cursor = conn.cursor()
@@ -28,7 +26,6 @@ def add_expense(date, description, amount):
     conn.commit()
     conn.close()
 
-# Listar todos los gastos
 def list_expenses():
     conn = sqlite3.connect("expenses.db")
     cursor = conn.cursor()
@@ -45,7 +42,6 @@ def list_expenses():
 
     conn.close()
 
-# Función principal
 def main():
     init_database()
 
